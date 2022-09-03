@@ -1,3 +1,4 @@
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
@@ -10,10 +11,6 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-php_value upload_max_filesize 256M
-php_value post_max_size 256M
-php_value max_execution_time 300
-php_value max_input_time 300
 </IfModule>
 
 # END WordPress
