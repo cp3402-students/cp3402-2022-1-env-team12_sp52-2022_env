@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+h1 {
+  color: $color__headings-primary;
+  font-size: 32pt;
+}
+
+h2 {
+  color: $color__headings-primary;
+  font-size: 26pt;
+}
+
+h3 {
+  color: $color__headings-primary;
+  font-size: 22pt;
+}
+
+h4 {
+  color: $color__headings-primary;
+  font-size: 20pt;
+}
+
+.entry-title {
+  text-align: center;
+}
