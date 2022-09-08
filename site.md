@@ -9,4 +9,5 @@ All features of pages, posts and subposts that can be customized will be listed 
 
 Our Customize theme is used for this website project which can be active by going to the Appearance section -> Theme -> Activate Baizonn theme.
 Each page and post will have two distinct templates from which to choose: Defaut template and Baizonn Full width.
+
 The Defaut template will offer the activated page/post with a sidebar above the Footer at the bottom of the page/post where by activated Baizonn theme template will remove this sidebar.
