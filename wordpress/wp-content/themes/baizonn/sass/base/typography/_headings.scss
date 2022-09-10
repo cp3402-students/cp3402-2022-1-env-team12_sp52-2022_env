@@ -1,0 +1,42 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: .75em;
+	margin-bottom: .25em;
+  clear: both;
+}
+
+h1 {
+  color: $color__headings-primary;
+  font-size: 40pt;
+}
+
+h2 {
+  color: $color__headings-primary;
+  font-size: 36pt;
+}
+
+h3 {
+  color: $color__headings-primary;
+  font-size: 32pt;
+}
+
+h4 {
+  color: $color__headings-primary;
+  font-size: 30pt;
+}
+
+h5 {
+	font-size: 28pt;
+}
+
+h6 {
+	font-size: 26pt;
+}
+
+.entry-title {
+  text-align: center;
+}
