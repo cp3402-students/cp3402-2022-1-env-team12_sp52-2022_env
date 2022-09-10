@@ -1,0 +1,100 @@
+.header-image{
+    max-height: 60vh;
+    overflow: hidden;
+    img {
+        display:block;
+        width: 100vw;
+    }
+}
+.site-navigation{
+    display:flex;
+    
+}
+.menu-main-menu-container{
+    float:right;
+}
+
+.site-header {
+    position:relative;
+    font-family:$font__main;
+    font-size:$font-size-base;
+    .site-branding {
+        min-height: 100px;
+        display: flex;
+        
+        .custom-logo-link {
+            margin-right:1em;
+            .custom-logo {
+                padding:10px;
+                height:auto;
+                width: 200px;
+            }
+        }
+    
+    }
+    .site-branding-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .site-title {
+            font-size: 25px;
+            margin: 0;
+            a {
+                text-decoration: none;
+            }
+        }
+        .site-description {
+            font-size: 25px;
+            font-weight: 400;
+            margin: 0;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+        
+    }
+
+
+
+.site-title{
+    margin:0;
+    padding:0;
+    font-size:1.6em;
+    font-weight:900;
+    a {
+        color:$color__text;
+        text-decoration:none;
+        &:hover,&:focus {
+            text-decoration:underline;
+            }
+        }
+    }
+
+.site-description {
+    margin:0;
+    padding:0;
+    font-size:.9em;
+    font-weight:100;
+    font-style: italic;
+    }
+
+@media screen and (min-width: $breakpoint__md) {
+        .site-header {
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+        .site-branding {
+            width:35%;
+            flex: 1 0 auto;
+            }
+        .main-navigation {
+            width:65%;
+            }
+        }
+
+
+.menu-expand-icon{
+    width:50px;
+}
