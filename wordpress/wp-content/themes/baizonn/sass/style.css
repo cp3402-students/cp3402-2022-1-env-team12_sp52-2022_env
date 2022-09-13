@@ -617,9 +617,6 @@ a:visited {
 a:hover, a:focus, a:active {
   color: #2070ae;
 }
-a:focus {
-  outline: thin dotted;
-}
 a:hover, a:active {
   outline: 0;
 }
@@ -769,16 +766,17 @@ blockquote, q {
 .main-navigation {
   display: block;
   float: right;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   top: 42px;
   right: 0;
 }
 @media screen and (max-width: 480px) {
   .main-navigation {
-    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
     top: 50px;
     right: 0;
-    background-color: #fff;
     padding: 8px;
   }
 }
@@ -805,34 +803,56 @@ blockquote, q {
 .main-navigation ul ul a {
   width: 200px;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
 .main-navigation li {
   position: relative;
 }
 @media screen and (min-width: 480px) {
   .main-navigation li {
     padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  .main-navigation li:not(:last-child) {
+    border-right: 1px solid #eee;
+  }
+  .main-navigation li:first-child {
+    border-left: 1px solid #eee;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-navigation li:not(:last-child) {
+    border-bottom: 1px solid #eee;
   }
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  background-color: #fff;
-  color: #000;
+  color: #2070ae;
+  background-color: transparent;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+  color: #fff !important;
+}
+.main-navigation .current_page_item,
+.main-navigation .current-menu-item,
+.main-navigation .current_page_ancestor,
+.main-navigation .current-menu-ancestor {
+  background: #2070ae;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
   .menu-toggle,
 .main-navigation.toggled ul {
+    width: 100%;
     -webkit-animation-name: showList;
             animation-name: showList;
     -webkit-animation-duration: 1s;
@@ -1598,7 +1618,7 @@ blockquote, q {
 /* footer
 --------------------------------------------- */
 .site-footer {
-  position: inherit;
+  position: absolute;
   padding: 1em;
   font-family: "Dongle", sans-serif;
   font-size: 25px;
@@ -1684,22 +1704,33 @@ blockquote, q {
   width: 100vw;
 }
 
-.site-navigation {
-  display: flex;
+#site-navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  text-align: center;
+  background-color: #fff;
 }
 
-.menu-main-menu-container {
-  float: right;
+@media screen and (min-width: 480px) {
+  .menu-main-menu-container {
+    float: right;
+  }
 }
 
 .site-header {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
   font-family: "Dongle", sans-serif;
   font-size: 25px;
+  background: #fff;
+  z-index: 9999;
 }
 .site-header .site-branding {
-  min-height: 100px;
   display: flex;
+  height: 71px;
 }
 .site-header .site-branding .custom-logo-link {
   margin-right: 1em;
@@ -1713,18 +1744,22 @@ blockquote, q {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1em;
 }
 .site-header .site-branding-text .site-title {
-  font-size: 25px;
+  font-size: 40px;
   margin: 0;
 }
 .site-header .site-branding-text .site-title a {
   text-decoration: none;
+  background: -webkit-linear-gradient(-45deg, #000000, #2070ae, #138143, #bce8cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .site-header .site-branding-text .site-description {
   font-size: 25px;
   font-weight: 400;
-  margin: 0;
+  margin-top: -25px;
 }
 .site-header .site-branding-text .site-description a {
   text-decoration: none;
@@ -1837,4 +1872,39 @@ div[class*=wp-container-] ul > li {
 
 .mptt-shortcode-table {
   min-height: 2000px;
+}
+
+@media screen and (min-width: 480px) {
+  div.wpforms-container-full {
+    width: 70%;
+  }
+}
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+.wpforms-submit-container button[type=submit] {
+  border-radius: 8px;
+  border: none !important;
+  background-color: #138143 !important;
+  color: #fff !important;
+  width: 150px;
+}
+.wpforms-submit-container button[type=submit]:hover {
+  background-color: #2070ae !important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  background: -webkit-linear-gradient(-45deg, #000000, #2070ae, #138143, #bce8cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-size: 1em;
+}
+div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
+  font-size: 0.85em;
 }/*# sourceMappingURL=style.css.map */

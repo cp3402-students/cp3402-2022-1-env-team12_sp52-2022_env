@@ -1,0 +1,119 @@
+.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+  width: 100%;
+}
+
+.wp-block-cover__inner-container {
+  text-align: center;
+  p {
+    text-align: center;
+  }
+}
+
+.wp-block-post-title {
+  a:hover {
+    color: $color__text-screen;
+  }
+}
+.wp-block-post-excerpt__more-link {
+  &:hover {
+    color: $color__text-screen;
+  }
+}
+.has-cool-to-warm-spectrum-gradient-background {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.has-pale-ocean-gradient-background {
+  width: 100%;
+}
+
+div[class*="wp-container-"] {
+  justify-content: center;
+  align-items: center;
+
+  ul > li {
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.wp-block-group__inner-container > ul > li {
+  box-shadow: none !important;
+}
+
+.wp-image-147 {
+  width: 400px;
+}
+
+.entry-content .wp-block-cover__inner-container div {
+  width: auto;
+}
+
+.wp-block-buttons {
+  padding: 16px;
+}
+
+.wpforms-field-medium {
+  max-width: 100% !important;
+}
+
+//wp timetable style
+.wp-block-timetable {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  select {
+    margin: auto;
+  }
+}
+
+.mptt-shortcode-table {
+  min-height: 2000px;
+}
+
+@media screen and (min-width: 480px) {
+  div.wpforms-container-full {
+    width: 70%;
+  }
+}
+
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+  button[type="submit"] {
+    border-radius: 8px;
+    border: none !important;
+    background-color: $color__interactive !important;
+    color: $color__text-white !important;
+    width: 150px;
+    &:hover {
+      background-color: $color__text-screen !important;
+    }
+  }
+}
+
+div.wpforms-container-full {
+  .wpforms-form {
+    .wpforms-title {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 900;
+      background: -webkit-linear-gradient(
+        -45deg,
+        #000000,
+        #2070ae,
+        #138143,
+        #bce8cc
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .wpforms-field-label {
+      font-size: 1em;
+    }
+
+    .wpforms-field-sublabel {
+      font-size: 0.85em;
+    }
+  }
+}

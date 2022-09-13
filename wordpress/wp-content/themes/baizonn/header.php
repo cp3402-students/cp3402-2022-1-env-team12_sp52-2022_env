@@ -17,6 +17,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<meta name="theme-name" content="Baizonn">
+	<meta name="description" content="This is Baizonn website">
+	<meta name="author" content="Team 12">
+	<meta name="github" href="https://github.com/cp3402-students/cp3402-2022-1-site-team12_theme">
+
 	<?php wp_head(); ?>
 </head>
 
